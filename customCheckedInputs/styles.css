@@ -1,0 +1,43 @@
+:root input[type=checkbox],
+:root input[type=radio] {
+  /* original checked inputs are push outside the viewport */
+  position: absolute;
+  left: -1000em;
+}
+
+:root input[type=checkbox] + label:before,
+:root input[type=radio] + label:before {
+  content: "";
+  display: inline-block;
+  width  : 28px;
+  height : 28px;
+  margin : 0 .5em 0 0;
+  background: url("checkbox_360.png") no-repeat 0 -28px;
+
+/* The following is used to adjust the position of 
+   the check boxes on the text baseline */
+  vertical-align: bottom;
+  position: relative;
+  bottom: -4px;
+}
+
+:root input:checked + label:before {
+    background-position: 0 0;
+}
+
+:root input:disabled + label:before {
+  background-position: 0 -28px;
+  opacity: 0.5;
+}
+
+:root input:checked:disabled + label:before {
+  background-position: 0 0;
+  opacity: 0.5;
+}
+
+/* Because we hide the native check boxes, we have to
+   implement this feature ourselves to let the user know
+   where they are in the form. */
+:root input:focus + label:before {
+  outline: 1px dotted black;
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Custom Radio and Checkboxes</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Custom Radio and Checkboxes</h1>
+    
+    <form>
+        <fieldset>
+            <legend>Checkboxes</legend>
+            <p>
+                <input type="checkbox" id="first" name="pet-1" value="pug">
+                <label for="first">Pug</label>
+            </p>
+            <p>
+                <input type="checkbox" id="second" name="pet-2" value="pit" disabled>
+                <label for="second">Pit</label>
+            </p>
+            <p>
+                <input type="checkbox" id="third" name="pet-3" value="chihuahua">
+                <label for="third">Chihuahua</label>
+            </p>
+            <p>
+                <input type="checkbox" id="fourth" name="pet-4" value="pom" checked disabled>
+                <label for="fourth">Pom</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Radios</legend>
+            <p>
+                <input type="radio" name="size" id="size-1" value="small" checked>
+                <label for="size-1">Small</label>
+            </p>
+            <p>
+                <input type="radio" name="size" id="size-2" value="medium">
+                <label for="size-2">Medium</label>
+            </p>
+            <p>
+                <input type="radio" name="size" id="size-3" value="large">
+                <label for="size-3">Large</label>
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
