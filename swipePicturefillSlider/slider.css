@@ -1,0 +1,24 @@
+/* swipejs styles */
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
+#slider3 {
+    width: 100%;
+}
+
+.swipe-wrap > div img {
+    width: 100%;
+    height: auto;
+}

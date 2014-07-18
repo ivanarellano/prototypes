@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swipe + Picturefill slider</title>
+
+    <link rel="stylesheet" href="slider.css">
+
+    <script src="vendor/picturefill.js"></script>
+    <script src="vendor/swipe.js"></script>
+</head>
+
+<body>
+
+<!--
+960: xx-large (2x)
+768: x-large (2x)
+480: large (1x)
+375: medium (1x)
+-->
+
+    <div id="slider1"></div>
+
+    <div id="slider2" class="swipe">
+        <div class="swipe-wrap">
+            <div>
+                <picture>
+                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                    <source srcset="480_01.png, 960_01.png 2x" media="(min-width: 800px)">
+                    <source srcset="375_01.png, 768_01.png 2x">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img srcset="480_01.png" alt="slide 0">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                    <source srcset="480_02.png, 960_02.png 2x" media="(min-width: 800px)">
+                    <source srcset="375_02.png, 768_02.png 2x">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img srcset="480_02.png" alt="slide 1">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                    <source srcset="480_03.png, 960_03.png 2x" media="(min-width: 800px)">
+                    <source srcset="375_03.png, 768_03.png 2x">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img srcset="480_03.png" alt="slide 2">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    window.mySwipe = new Swipe(document.getElementById('slider2'), {
+        startSlide: 0,
+        speed: 300,
+        auto: 3000,
+        continuous: true,
+        disableScroll: false,
+        stopPropagation: false,
+        callback: function(index, elem) {},
+        transitionEnd: function(index, elem) {}
+    });
+    </script>
+</body>
+
+</html>
