@@ -1,3 +1,5 @@
+/* Legacy browsers without :root selection will use the default form inputs. */
+
 :root input[type=checkbox], :root input[type=radio] {
     /* original checked inputs are push outside the viewport */
     position: absolute;
