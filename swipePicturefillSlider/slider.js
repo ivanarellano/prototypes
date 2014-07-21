@@ -1,3 +1,6 @@
+/* None of this is currently being used. 
+   This is a concept-only module */
+   
 var Slider = (function() {
     'use strict';
 
