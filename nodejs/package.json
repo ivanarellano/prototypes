@@ -1,0 +1,15 @@
+{
+  "name": "napilio",
+  "version": "0.0.0",
+  "description": "Node + Hapi + Twilio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^6.2.1"
+  }
+}
