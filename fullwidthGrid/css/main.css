@@ -1,17 +1,3 @@
-/*#corset {
-  margin-bottom: 1em;
-}
-
-#corset:checked + label span::after {
-  content: 'Tight';
-  display: inline-block;
-}
-
-#corset:not(:checked) + label span::after {
-  content: 'Loose';
-  display: inline-block;
-}*/
-
 .row img {
   margin: 0 auto;
   display: block;
@@ -23,6 +9,14 @@
 
 .row {
   border-bottom: 5px solid white;
+}
+
+.column {
+  margin-bottom: 1em;
+}
+
+.column:last-child {
+  margin-bottom: 0;
 }
 
 /**
