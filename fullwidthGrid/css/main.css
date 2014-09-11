@@ -1,0 +1,74 @@
+/*#corset {
+  margin-bottom: 1em;
+}
+
+#corset:checked + label span::after {
+  content: 'Tight';
+  display: inline-block;
+}
+
+#corset:not(:checked) + label span::after {
+  content: 'Loose';
+  display: inline-block;
+}*/
+
+.row img {
+  margin: 0 auto;
+  display: block;
+}
+
+.full-width {
+  max-width: none;
+}
+
+.row {
+  border-bottom: 5px solid white;
+}
+
+/**
+ * Row Colors
+ * */
+
+.row:nth-of-type(1) { background: lightseagreen; }
+.row:nth-of-type(2) { background: lightslategrey; }
+.row:nth-of-type(3) { background: lightcoral; }
+
+/**
+ * Column Colors
+ * */
+
+/*.column { background: rgba(0,0,0,0.5); }*/
+.row .column:nth-child(even) { background: rgba(0, 0, 0, 0.5);}
+.row .column:nth-child(odd) { background: rgba(255, 255, 255, 0.5); }
+
+/**
+ * Visibility
+ * Zurb Foundation (http://foundation.zurb.com/docs/components/visibility.html)
+ * */
+
+/* small displays */
+@media only screen {
+  .show-for-small-only, .show-for-small-up, .show-for-small, .show-for-small-down, .hide-for-medium-only, .hide-for-medium-up, .hide-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down {
+    display: inherit !important; }
+
+  .hide-for-small-only, .hide-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .hide-for-large-down {
+    display: none !important; }
+}
+
+/* medium displays */
+@media only screen and (min-width: 40.063em) {
+  .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down {
+    display: inherit !important; }
+
+  .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .hide-for-medium-only, .hide-for-medium-up, .hide-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .hide-for-large-down {
+    display: none !important; }
+}
+
+/* large displays */
+@media only screen and (min-width: 64.063em) {
+  .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .show-for-large-down {
+    display: inherit !important; }
+
+  .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .show-for-medium-only, .hide-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .hide-for-large-down {
+    display: none !important; }
+}
