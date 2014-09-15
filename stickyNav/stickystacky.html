@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sticky Stacky</title>
+  <style>
+    body { margin: 0; padding: 0; }
+    .gray3 { background:#ddd; }
+    .gray2 { background:#bbb; }
+    .gray1 { background:#999; }
+  </style>
+  <script src="stickystacky/sticky-stacky.js"></script>
+</head>
+<body>
+
+<h1><a href="https://github.com/gcpantazis/sticky-stacky">Sticky Stacky</a></h1>
+
+<div style="height:3000px;">
+    <div class="ss gray3">
+        <h2>8-bit wolf Kickstarter</h2>
+        <p>8-bit wolf Kickstarter readymade post-ironic asymmetrical, McSweeney's ugh Marfa typewriter selvage keytar aesthetic bespoke.</p>
+    </div>
+
+    <div style="height:200px;"></div>
+
+    <div class="ss gray2">
+        <h3>Gentrify readymade street art Pinterest.</h4>
+        <p>Slow-carb VHS XOXO kogi bespoke Shoreditch, synth selfies flexitarian.</p>
+    </div>
+
+    <div style="height:200px;"></div>
+
+    <h2>Beard messenger bag cray, organic Schlitz yr kitsch.</h2>
+    <p class="ss gray1">
+      Neutra Thundercats Tumblr fingerstache cornhole.
+      <br><br>
+      Beard messenger bag cray, organic Schlitz yr kitsch.
+    </p>
+</div>
+
+
+<script>
+var ss = document.querySelectorAll('.ss');
+
+[].forEach.call(ss,
+  function(elem) {
+    new StickyStacky(elem);
+  }
+);
+</script>
+</body>
+</html>

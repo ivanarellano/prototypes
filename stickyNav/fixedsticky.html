@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Fixed Sticky</title>
+    <link rel="stylesheet" href="fixedsticky/fixedsticky.css">
+
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Fixed-Sticky CSS */
+    .top {
+      top: 0;
+      background: rgba(0,255,0,0.5);
+    }
+    .bottom {
+      bottom: 0;
+      background: rgba(255,0,0,0.5);
+    }
+    .container {
+      background: #ccc;
+    }
+
+    .fixedsticky {
+      padding: 1.5em;
+    }
+
+    .fixedsticky-on {
+      width: 100%;
+    }
+    </style>
+
+  </head>
+  <body>
+    <h1><a href="https://github.com/filamentgroup/fixed-sticky">Fixed-sticky</a></h1>
+
+    <!-- Spacer --> <div style="height:25px"></div>
+
+    <div class="container" style="height: 600px;">
+      <h2>DIV A</h2>
+
+      <div class="top fixedsticky">
+        Fixed to top of DIV A.
+      </div>
+    </div>
+
+    <div style="height:400px"></div>
+
+    <div class="top fixedsticky">
+      Fixed to top of window
+    </div>
+
+    <!-- Spacer --> <div style="height:400px"></div>
+
+    <div id="bottom-b" class="bottom fixedsticky">
+      Fixed to bottom of window
+    </div>
+
+    <!-- Spacer --> <div style="height:200px"></div>
+
+    <div class="container">
+      <h2>DIV B</h2>
+
+      <div style="height: 300px"></div>
+      <div id="bottom-a" class="bottom fixedsticky">
+        Fixed to bottom of DIV B
+      </div>
+    </div>
+
+    <!-- Spacer --> <div style="height:300px"></div>
+
+    <script src="fixedsticky/bower_components/jquery/dist/jquery.js"></script>
+    <script src="fixedsticky/fixedsticky.js"></script>
+    <script>
+    $( '.top, .bottom' ).fixedsticky();
+    </script>
+  </body>
+</html>
