@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Stick Up</title>
+
+    <style>
+      * {
+        margin: 0 !important;
+      }
+
+      body {
+        padding: 0;
+        line-height: 150%;
+        font-family: sans-serif;
+      }
+
+      /* Site Nav */
+      .site-nav {
+        min-height: 1em;
+        padding: 1em;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+        background: white;
+      }
+
+      /* will change based off total instances */
+      .z1 { z-index: 5; }
+      .z2 { z-index: 6; }
+      .z3 { z-index: 7; }
+      .z4 { z-index: 8; }
+      .z5 { z-index: 9; }
+
+      .fw {
+        width: 100%;
+      }
+
+      h2 {
+        padding: .5em;
+        width: 100%;
+      }
+
+      .even {
+        background-color: #888;
+      }
+
+      .odd {
+        background-color: #ccc;
+      }
+
+      .sticky-stacky h2 {
+        margin: 0;
+      }
+
+      .sticky-stacky {
+        position: relative;
+      }
+    </style>
+
+    <script src="stickup.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function(e) {
+
+      new StickUp(document.querySelector('.site-nav'));
+
+      var ssh2 = document.querySelectorAll('h2');
+
+      [].forEach.call(ssh2,
+        function(elem) {
+          new StickUp(elem);
+        }
+      );
+    });
+    </script>
+
+  </head>
+<body>
+
+<div id="nav" class="site-nav fw z1">Navigation/Account bar</div>
+
+<div style="height:25px"></div>
+
+<div id="lotsofdivs">
+  <div id="base fw">
+    <h2 class="z2 odd">Header 1</h2>
+    <p>Bitters hella biodiesel, mixtape you probably haven't heard of them Etsy actually flexitarian iPhone.  Neutra Echo Park bitters Etsy kale chips semiotics Odd Future mixtape.  Blog mustache gentrify chia.  Sustainable cardigan artisan retro, raw denim narwhal trust fund synth selfies Shoreditch ennui viral tote bag aesthetic occupy.  Sartorial direct trade  butcher, kitsch banjo Williamsburg American Apparel iPhone.  Thundercats keytar freegan, Truffaut whatever Godard church-key four loko lomo iPhone chillwave.  Skateboard retro forage readymade plaid pork belly.</p>
+
+    <p>Cosby sweater pickled retro direct trade  deep v, fixie actually hella swag stumptown Etsy umami.  Artisan XOXO small batch, umami whatever bespoke disrupt cardigan fashion axe banh mi vegan Neutra cornhole tofu.  DIY whatever brunch organic.  Pitchfork occupy aesthetic, letterpress biodiesel Neutra bitters sriracha mixtape locavore iPhone jean shorts fixie.  Master cleanse church-key Portland Echo Park roof party.  Street art sartorial irony Kickstarter quinoa selvage.  Narwhal Cosby sweater Echo Park, mixtape kale chips letterpress keffiyeh Godard craft beer PBR&amp;B put a bird on it actually Portland semiotics.</p>
+
+    <h2 class="z3 even">Header 2</h2>
+    <p>Brunch cred cliche street art, direct trade  readymade stumptown crucifix biodiesel trust fund hoodie.  Direct trade  yr tousled Schlitz Pitchfork.  Chambray Thundercats beard deep v authentic, normcore distillery banh mi try-hard.  Narwhal PBR paleo you probably haven't heard of them, chambray DIY selfies.  Austin Schlitz shabby chic fingerstache.  Biodiesel paleo umami lo-fi.  Truffaut jean shorts messenger bag Austin.</p>
+
+    <p>Church-key kale chips hella next level.  Gentrify farm-to-table Etsy shabby chic.  Pug wolf readymade, kitsch seitan drinking vinegar ugh pork belly High Life XOXO sriracha cliche fixie deep v.  Lo-fi Intelligentsia DIY vegan.  Meh Echo Park chia tousled Thundercats American Apparel, cliche tofu.  Leggings Odd Future Pinterest bitters paleo, pork belly Thundercats Carles retro vegan drinking vinegar craft beer chia mumblecore Etsy.  Bitters slow-carb shabby chic, meggings mumblecore occupy tofu mustache lo-fi food truck cray cardigan wayfarers.</p>
+
+    <h2 class="z4 odd">Header 3</h2>
+    <p>Food truck church-key freegan meggings fashion axe single-origin coffee plaid, synth scenester.  Lomo typewriter authentic 3 wolf moon, readymade tattooed sustainable swag.  Mustache umami tofu distillery cred vinyl.  Sartorial cred yr ethical church-key Cosby sweater plaid fashion axe actually, hella photo booth Neutra.  Aesthetic mixtape Brooklyn gentrify swag biodiesel.  Pug Thundercats tofu, keytar meggings kogi banjo sriracha deep v Godard PBR.  You probably haven't heard of them art party salvia Tonx normcore, meh cornhole put a bird on it whatever Intelligentsia.</p>
+
+    <p>Yr PBR skateboard, freegan paleo pickled Echo Park tattooed distillery 3 wolf moon beard.  Helvetica 8-bit Intelligentsia forage dreamcatcher, 3 wolf moon street art irony semiotics.  Photo booth blog four loko squid, Neutra twee occupy pop-up selfies Kickstarter banjo Helvetica distillery gluten-free single-origin coffee.  XOXO readymade +1, plaid flexitarian church-key hoodie.  Intelligentsia DIY small batch, Godard mumblecore Brooklyn skateboard Williamsburg VHS put a bird on it fap distillery typewriter selvage tofu.  Scenester hoodie 3 wolf moon synth, artisan organic chambray Williamsburg PBR&amp;B.  Direct trade  distillery pork belly next level, +1 Portland aesthetic food truck lomo gastropub master cleanse tofu paleo salvia organic.</p>
+
+    <h2 class="z5 even">Header 4</h2>
+    <p>Selvage Cosby sweater raw denim messenger bag beard Truffaut.  Wolf sartorial craft beer wayfarers hella vegan irony mumblecore crucifix.  Freegan lomo YOLO Vice, banh mi distillery XOXO gastropub meggings mumblecore gluten-free.  Direct trade  narwhal yr jean shorts, iPhone disrupt tofu Odd Future banh mi locavore post-ironic butcher.  PBR&amp;B Thundercats iPhone vegan, literally Banksy art party.  Bicycle rights selfies DIY, vegan put a bird on it skateboard Carles ennui meggings try-hard butcher trust fund aesthetic.  Fingerstache narwhal church-key, quinoa trust fund banh mi roof party authentic umami Carles asymmetrical mumblecore cred Godard.</p>
+
+    <p>Gentrify Godard Etsy Vice lo-fi bicycle rights.  Try-hard skateboard cardigan, polaroid American Apparel semiotics gastropub deep v tote bag locavore master cleanse literally ethical kale chips umami.  Ugh vinyl aesthetic fashion axe food truck keytar, farm-to-table Cosby sweater church-key DIY cornhole fap twee.  Tousled occupy master cleanse, tote bag letterpress Pitchfork forage umami banjo actually cardigan street art DIY pug authentic.  Umami four loko fap pug butcher mlkshk Bushwick.  Typewriter distillery narwhal Portland Williamsburg, stumptown 90's gluten-free squid yr banjo Blue Bottle viral Austin.  Deep v selvage pour-over, cred seitan banh mi Williamsburg Shoreditch bespoke food truck craft beer Marfa four loko PBR.</p>
+  </div>
+</div>
+
+</body>
+</html>
