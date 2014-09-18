@@ -63,16 +63,9 @@
       instance.el.style.width = elWidth + 'px';
     },
 
-    cacheAll: function() {
-      var len = _instances.length;
-      for (int i = 0; i < len; i++) {
-        _instances[i]
-      }
-    }
-
     unstickAll: function() {
       var len = _instances.length;
-      for (int i = 0; i < len; i++) {
+      for (var i = 0; i < len; i++) {
         _ss.unstickInstance(_instances[i]);
       }
     },
