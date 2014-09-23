@@ -1,0 +1,59 @@
+@import "singularitygs";
+@import "breakpoint";
+@import "settings";
+
+/* https://github.com/Team-Sass/Singularity */
+
+// Be sure to enable debug mode for your grid visualization to show up:
+// @include sgs-change('debug', true);
+
+/* Singularity GS */
+@include add-grid(2);
+@include add-grid(6 at $medium-bk);
+@include add-grid(12 at $large-bk);
+@include add-grid(18 at $exlarge-bk);
+
+@include add-gutter(1em);
+@include add-gutter-style('split');
+
+@include sgs-change('output', 'float');
+// @include sgs-change('output', 'isolation');
+
+#singularitygs {
+  @include clearfix();
+  background: hsl(334,50%,75%);
+
+  img {
+    @include grid-span(1);
+    margin-bottom: 3em;
+  }
+}
+
+@include breakpoint($medium-bk) {
+  #singularitygs {
+    .grid-width {
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    img {
+      @include grid-span(2);
+    }
+  }
+}
+
+@include breakpoint($large-bk) {
+  #singularitygs {
+    img {
+      @include grid-span(3);
+    }
+  }
+}
+
+@include breakpoint($exlarge-bk) {
+  #singularitygs {
+    img {
+      @include grid-span(3);
+    }
+  }
+}

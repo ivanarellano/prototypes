@@ -1,0 +1,25 @@
+@import "compass/css3/flexbox";
+
+.flexbox-container {
+  @include display-flex;
+  @include flex-direction(row); // row: default
+  @include flex-wrap(wrap); // nowrap: default
+  @include justify-content(center);
+}
+
+.flex-item {
+  @include flex(0 1 auto);
+}
+
+#flexbox {
+  background: hsl(471,50%,75%);
+
+  .grid-width {
+    @extend .flexbox-container;
+
+    img {
+      @extend .flex-item;
+      margin: .25em;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@mixin pad-ratio($x, $y, $selector: img) {
+  position: relative;
+  padding: 0 0 percentage($y/$x) 0;
+  height: 0;
+  #{$selector} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.element-to-stretch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#intrinsic-wrapper {
+  background: hsl(434,50%,75%);
+
+  .grid-width {
+    text-align: center;
+  }
+
+  .img-width {
+    max-width: 14.5em;
+    width: 46.5%;
+    display: inline-block;
+    margin: .25em;
+  }
+
+  .inner {
+    @include pad-ratio(236/315, 1);
+  }
+}

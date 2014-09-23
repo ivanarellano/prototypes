@@ -1,0 +1,19 @@
+@import "compass";
+@import "breakpoint";
+@import "partials/settings";
+@import "partials/standardgrid";
+@import "partials/flexbox";
+@import "partials/intrinsicratio";
+@import "partials/singularitydemo";
+
+* {
+  @include box-sizing(border-box);
+}
+
+h1 {
+  font-size: 1em;
+}
+
+.grid-width {
+  max-width: $max-grid-width;
+}

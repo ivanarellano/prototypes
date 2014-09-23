@@ -1,0 +1,27 @@
+@import "compass";
+
+#standardgrid {
+  background: hsl(394,50%,75%);
+
+  .grid-width {
+    text-align: center;
+    @include clearfix();
+
+    img {
+      margin: .25em;
+      width: 9em;
+    }
+  }
+}
+
+@include breakpoint($medium-bk) {
+  #standardgrid {
+
+    .grid-width {
+      
+      img {
+        width: auto;
+      }
+    }
+  }
+}
