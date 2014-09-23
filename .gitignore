@@ -64,3 +64,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+# Sass Cache
+.sass-cache
