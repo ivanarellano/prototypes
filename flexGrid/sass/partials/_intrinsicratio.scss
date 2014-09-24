@@ -1,4 +1,3 @@
-/* http://www.fredparke.com/blog/css-padding-trick-responsive-intrinsic-ratios */
 @mixin pad-ratio($x, $y, $selector: img) {
   position: relative;
   padding: 0 0 percentage($y/$x) 0;
